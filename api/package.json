@@ -1,0 +1,20 @@
+{
+  "name": "my-app-backend",
+  "version": "0.0.1",
+  "description": "This is the backend of my app",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/index.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "mongoose": "^5.9.28"
+  }
+}

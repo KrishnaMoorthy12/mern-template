@@ -1,0 +1,26 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "description": "My MERN Stack application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: Test is not setup yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnaMoorthy12/mern-template.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishnaMoorthy12/mern-template/issues"
+  },
+  "homepage": "https://github.com/KrishnaMoorthy12/mern-template#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "js-logger": "^1.6.0"
+  }
+}
