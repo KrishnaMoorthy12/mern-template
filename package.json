@@ -4,6 +4,14 @@
   "description": "My MERN Stack application",
   "main": "index.js",
   "scripts": {
+    "deps:api": "cd api && npm i && cd ..",
+    "deps:app": "cd app && npm i && cd ..",
+    "deps": "npm i && npm run deps:api && npm run deps:app",
+    "format": "prettier --write \"**/*.{js,jsx,html,scss}\"",
+    "format:check": "prettier -c \"**/*.{js,jsx,html,scss}\"",
+    "start": "node server.js",
+    "server": "nodemon --ignore app/",
+    "app": "npm start --prefix app",
     "test": "echo \"Error: Test is not setup yet\""
   },
   "repository": {
@@ -22,5 +30,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "js-logger": "^1.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2"
   }
 }
