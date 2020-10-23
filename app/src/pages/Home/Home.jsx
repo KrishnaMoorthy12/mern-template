@@ -1,8 +1,6 @@
-import React from 'react'
-import {MyComponent} from '../../components';
+import React from "react";
+import { MyComponent } from "../../components";
 
 export default function Home() {
-  return (
-    <MyComponent/>
-  )
+  return <MyComponent />;
 }
