@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/KrishnaMoorthy12/mern-template#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "js-logger": "^1.6.0"
   },
