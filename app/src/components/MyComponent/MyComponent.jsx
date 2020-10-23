@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function MyComponent() {
   return <h1>Hello World!</h1>;
