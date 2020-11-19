@@ -1,6 +1,7 @@
 import express from 'express';
 import Logger from 'js-logger';
 import cors from 'cors';
+import morgan from 'morgan';
 
 import APIRouter from './api/router';
 import APPRouter from './app/app';
@@ -12,6 +13,7 @@ const port = Number(process.env.PORT) || 5000;
 Logger.setLevel(process.env.NODE_ENV === 'production' ? Logger.ERROR : Logger.DEBUG);
 
 server.use(express.json());
+server.use(morgan('dev'));
 server.use(cors());
 
 server.use('/api', APIRouter);
