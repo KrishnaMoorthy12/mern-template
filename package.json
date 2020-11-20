@@ -9,9 +9,12 @@
     "deps": "npm i && npm run deps:api && npm run deps:app",
     "format": "prettier --write \"**/*.{js,jsx,html,scss}\"",
     "format:check": "prettier -c \"**/*.{js,jsx,html,scss}\"",
-    "start": "node server.js",
-    "server": "nodemon --ignore app/",
+    "start": "babel-node server.js",
+    "server": "nodemon --exec babel-node server.js --ignore app/",
+    "build:server": "babel server.js --out-file server-compiled.js",
     "app": "npm start --prefix app",
+    "build:app": "npm run build --prefix app",
+    "build": "concurrently \"npm run build:server\" \"npm run build:app\"",
     "test": "echo \"Error: Test is not setup yet\""
   },
   "repository": {
@@ -29,11 +32,15 @@
   "homepage": "https://github.com/KrishnaMoorthy12/mern-template#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "morgan": "^1.10.0",
     "express": "^4.17.1",
-    "js-logger": "^1.6.0"
+    "js-logger": "^1.6.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6",
     "prettier": "^2.1.2"
