@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "description": "My MERN Stack application",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "deps:api": "cd api && npm i && cd ..",
     "deps:app": "cd app && npm i && cd ..",
     "deps": "npm i && npm run deps:api && npm run deps:app",
     "format": "prettier --write \"**/*.{js,jsx,html,scss}\"",
     "format:check": "prettier -c \"**/*.{js,jsx,html,scss}\"",
-    "start": "node --experimental-modules server.js",
+    "start": "node server.js",
     "server": "nodemon --ignore app/",
     "app": "npm start --prefix app",
     "test": "echo \"Error: Test is not setup yet\""
